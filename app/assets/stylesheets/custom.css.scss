@@ -5,7 +5,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
-
+$red: #b30015;
 /* universal */
 
 body {
@@ -62,7 +62,7 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
@@ -70,6 +70,14 @@ p {
     color: white;
     text-decoration: none;
   }
+}
+
+greeting {
+  font-size: 1.5em;
+  color: $gray-medium-light;
+  margin-top: 90px;
+  padding-top: 9px;
+
 }
 
 /* footer */
