@@ -2,9 +2,14 @@
       <div class="container">
         <%= link_to "MovieBlog", '#', id: "logo" %>
         <nav>
-          <greeting> <% if signed_in? %>
-                           Hello, <%= current_user.email.split('@').first %> !</greeting>
-                    <% end %>
+          
+            <greeting class="nav navbar-nav navbar-center"> 
+              <% if signed_in? %>
+                 Hello, <%= current_user.email.split('@').first %> !
+              <% end %>
+            </greeting>
+          
+                    
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",   root_path %></li>
             <li><%= link_to "Help",   help_path %></li>
