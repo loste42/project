@@ -7,5 +7,12 @@ module ApplicationHelper
         else
           page_title + " | " + base_title
         end
-     end
+    end
+     
+    def findUserMailById(i)
+        user = User.find_by(:id => i)
+        if user != nil
+            user.email
+        end
+    end
 end
