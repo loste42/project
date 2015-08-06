@@ -1,29 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @movie.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @movie.description %>
-</p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @movie.year %>
-</p>
+  <div class="row">
+    <div class="col-lg-8">
+      <strong><%= @movie.title %></strong>   <%= @movie.year %>
+    </div>
+    <div class="col-lg-4">
+      <strong>Created By:</strong>
+          <%= @movie.user.email.split('@').first %>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div id="moviemain">
+      <div class="col-lg-8">
+        <strong>Description:</strong>
+        <%= @movie.description %>
+      </div>
+      <div class="col-lg-4">  
+        <strong>Picture: </strong>
+        <%= @movie.picture %>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @movie.picture %>
-</p>
+<div class="row">
+  <%= link_to 'Write a review!', '#' %>
+  <%= link_to 'Edit', edit_movie_path(@movie) %> |
+  <%= link_to 'Back', movies_path %>
+</div>
 
-<p>
-  <strong>Created By:</strong>
-  <%= @movie.user.email.split('@').first %>
-</p>
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
