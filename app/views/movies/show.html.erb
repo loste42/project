@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
   <div class="row">
     <div class="col-lg-8">
@@ -12,13 +12,12 @@
   
   <div class="row">
     <div id="moviemain">
-      <div class="col-lg-8">
+      <div class="col-lg-7">
         <strong>Description:</strong>
         <%= @movie.description %>
       </div>
-      <div class="col-lg-4">  
-        <strong>Picture: </strong>
-        <%= @movie.picture %>
+      <div class="col-lg-5">  
+        <img class="img-responsive"><%= image_tag @movie.image.url(:medium) %></img>
       </div>
     </div>
   </div>
