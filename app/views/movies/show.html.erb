@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-
-
   <div class="row">
     <div class="col-lg-8">
       <strong><%= @movie.title %></strong>   <%= @movie.year %>
@@ -24,8 +22,10 @@
       </div>
     </div>
   </div>
-
 <div class="row">
+  
+
+
   <%= link_to 'Write a review!', '#' %>
   <%= link_to 'Edit', edit_movie_path(@movie) %> |
   <%= link_to 'Back', movies_path %>
