@@ -11,28 +11,23 @@
 <body>
   <%= render 'layouts/header' %>
     
-    
-    
-    
     <div class="container">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       
-      <div class="container col-lg-10">
+      <div class="container col-md-10">
         <%= yield %>
       </div>
     
-      <div class="container col-lg-2">
-        <div class="well sidebar-nav">
-              <h3>Sidebar</h3>
-              <ul class="nav nav-list">
-                <%= render 'layouts/nav_items' %>
-              </ul>
-            </div><!--/.well -->
-      </div>
-      
-      
-      </div><!--/row-->
+    <div class="container col-md-2">
+      <div class="well sidebar-nav col-md-12">
+        <h3>Sidebar</h3>
+          <ul class="nav nav-list">
+            <%= render 'layouts/nav_items' %>
+          </ul>
+      </div><!--/.well -->
+     </div> 
+    </div><!--/row-->
       <%= render 'layouts/footer' %>
    
       
