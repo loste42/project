@@ -16,16 +16,33 @@
                   </tr>
                   <tr>
                     <td><strong>Description:</strong></td>
-                    <td><%= @movie.description %></td>
+                    <td></td>
                   </tr>
                   
                 </tbody>
               </table>
+              <%= link_to 'Write a review!', new_movie_review_path(@movie) %>
             </div>
+            <div>
+            <p><h1 class="review_title"><%= @movie.title %></h1><h2>(<%= @movie.year %>)</h2></p>
+            <p><%= @movie.description %></p>
+            
+            <% if @reviews.blank? %>
+              <h3>No reviews available.</h3>
+              <%= link_to "Write the first!", new_movie_review_path(@movie), class:"btn btn-danger" %>
+            <% else %>
+              <% @reviews.each do |review| %>
+                <div class="reviews">
+                  <p><%= review.rating %></p>
+                  <p><%= review.comment %></p>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
           </div>
           <div class="col-md-4 ">  
             <img class="img-responsive"><%= image_tag @movie.image.url(:medium) %></img>
-            <%= link_to 'Write a review!', '#' %>
+            
             <%= link_to 'Edit', edit_movie_path(@movie) %> |
             <%= link_to 'Back', movies_path %>
           </div>
