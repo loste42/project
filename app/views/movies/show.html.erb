@@ -1,3 +1,5 @@
+
+
 <div class="panel panel-default">
     <div class="panel-body">
       <div class="row">
@@ -24,7 +26,9 @@
               <%= link_to 'Write a review!', new_movie_review_path(@movie) %>
             </div>
             <div>
-            <p><h1 class="review_title"><%= @movie.title %></h1><h2>(<%= @movie.year %>)</h2></p>
+            <p><h1 class="review_title" display: inline;><%= @movie.title %></h1><h2>(<%= @movie.year %>)</h2></p>
+            <div class="star-rating" data-score=<%= @avg_review %>></div>
+            <em><%= "#{@reviews.length} reviews" %></em>
             <p><%= @movie.description %></p>
             
             <% if @reviews.blank? %>
@@ -33,7 +37,7 @@
             <% else %>
               <% @reviews.each do |review| %>
                 <div class="reviews">
-                  <div class"star-rating" data-score=<%= review.rating %>></div>
+                  <div class="star-rating" data-score=<%= review.rating %>></div>
                   <p><%= review.comment %></p>
                 </div>
               <% end %>
