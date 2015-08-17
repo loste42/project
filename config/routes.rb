@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :actors
   resources :movies do
     resources :reviews, except: [:show, :index]
   end

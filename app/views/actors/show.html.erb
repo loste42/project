@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="col-md-8">
+            <div class="panel panel-primary">
+              <div class="panel-heading"><p><h1 class="review_title" display: inline;><%= @actor.name %></p></div>
+              <div class="panel-body" >
+                
+                
+                <p><%= @actor.description %></p>
+              </div> 
+                
+            </div>
+            <div>Movies:</div>
+          </div>
+          
+          <div class="col-md-4 ">  
+            <img class="img-responsive"><%= image_tag @actor.image.url(:medium) %></img>
+            
+            <%= link_to 'Edit', edit_actor_path(@actor) %> |
+            <%= link_to 'Back', actors_path %>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

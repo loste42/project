@@ -1,0 +1,12 @@
+
+<div class="row">
+  <% @actors.each do |actor| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag actor.image.url(:medium), class: 'image'), actor %>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to 'New Actor', new_actor_path %>
+  
+</div>
