@@ -27,6 +27,16 @@
     <%= f.label :image %><br>
     <%= f.file_field :image %>
   </div>
+  <div class="field">
+    <%= hidden_field_tag "movie[actor_ids][]", nil %>
+    <% Actor.all.each do |actor| %>
+      <%= check_box_tag "movie[actor_ids][]", actor.id, @movie.actor_ids.include?(actor.id), id: dom_id(actor) %>
+      <%= label_tag dom_id(actor), actor.name %>
+      <%= text_field "movie.actor_id.role", :role %>
+      <br>
+      
+    <% end %> 
+  </div>
   
   
   

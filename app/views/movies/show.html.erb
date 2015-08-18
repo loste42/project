@@ -11,8 +11,18 @@
                 <div class="star-rating" data-score=<%= @avg_review %>></div>
                 <em><%= "#{@reviews.length} reviews" %></em>
                 <p><%= @movie.description %></p>
-              </div> 
-                
+              </div>
+              <div>
+                <table>
+                <% @movie.actors.each do |actor| %>
+                  <tr>
+                    <td><img class="img-responsive"><%= image_tag actor.image.url(:tiny) %></img></td>
+                    <td><%= actor.name %></td> 
+                    <td>as</td>
+                  </tr>
+                <% end %>
+                </table>
+              </div>
             </div>
             <% if @reviews.blank? %>
               <h3>No reviews available.</h3>
