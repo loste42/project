@@ -30,9 +30,16 @@
             <% else %>
               <%= link_to "Write a review!", new_movie_review_path(@movie) %><br><br>
               <% @reviews.each do |review| %>
-                <div class="reviews">
-                  <div class="star-rating" data-score=<%= review.rating %>></div>
-                  <p><%= review.comment %></p>
+                <div class="panel panel-default">
+                  <div class="reviews">
+                    <div class="star-rating" data-score=<%= review.rating %>></div>
+                    <p><%= review.comment %></p>
+                    <p><strong>Created by:</strong> <%= review.user.email.split('@').first %></p>
+                    <% if review.user_id == current_user.id %>
+                      <%= link_to "Edit!", edit_movie_review_path(review.movie_id, review.id) %>
+                      
+                    <% end %>
+                  </div>
                 </div>
               <% end %>
             <% end %>
