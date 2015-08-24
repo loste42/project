@@ -44,4 +44,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'project-mlhoste.c9.io' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {:address => "project-mlhoste.c9.io", :port => 1025}
+  
+  
+  #letter opener gem
+  config.action_mailer.delivery_method = :letter_opener
 end

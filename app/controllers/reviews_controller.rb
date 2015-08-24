@@ -20,6 +20,9 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.user_id = current_user.id
     @review.movie_id = @movie.id
+    
+    UserMailer.new_review_email(@movie).deliver_now
+    
     respond_to do |format|
       if @review.save
         format.html { redirect_to @movie, notice: 'Review was successfully created.' }

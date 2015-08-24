@@ -28,6 +28,7 @@
               <h3>No reviews available.</h3>
               <%= link_to "Write the first!", new_movie_review_path(@movie), class:"btn btn-danger" %>
             <% else %>
+              <%= link_to "Write a review!", new_movie_review_path(@movie) %><br><br>
               <% @reviews.each do |review| %>
                 <div class="reviews">
                   <div class="star-rating" data-score=<%= review.rating %>></div>
