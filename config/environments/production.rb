@@ -78,18 +78,17 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   
-  #opt-in
+  #SMTP
   config.action_mailer.delivery_method = :smtp
-  
+
   config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com",
-    :port => "587",
-    :domain => "gmail.com",
-    :user_name => "blank@gmail.com",
-    :password => "blank",
-    :authentication => "plain",
-    :enable_starttls_auto => true
+   :address              => "smtprelaypool.ispgateway.de",
+   :port                 => 587,
+   :user_name            => "ollidoof@adherry.de",
+   :password             => "mdfmeyk28T.q",
+   :authentication       => "plain",
+  :enable_starttls_auto => true
   }
   
-  config.action_mailer.default_url_options = {:host => 'http://movieblog-unboasting-miscellanist.de.a9sapp.eu/'}
+  config.action_mailer.default_url_options = {:host => 'movieblog-unboasting-miscellanist.de.a9sapp.eu' }
 end
