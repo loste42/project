@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :actors
   resources :movies do
     resources :reviews, except: [:show, :index]
+    resources :critics, except: [:show, :index]
   end
   devise_for :users
   #get 'users/new'

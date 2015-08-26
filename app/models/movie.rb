@@ -1,7 +1,7 @@
 class Movie < ActiveRecord::Base
   belongs_to :user
   has_many :reviews
-  
+  has_one :critic
   has_many :casts
   has_many :actors, through: :casts
   accepts_nested_attributes_for :casts
