@@ -8,14 +8,9 @@ $gray-medium-light: #eaeaea;
 $red: #b30015;
 /* universal */
 
-body {
-  padding-top: 15px;
-}
-
 #container {
   position: relative;
 }
-
 div.parent
 {
     position: relative;
@@ -28,6 +23,9 @@ div.child
     position: absolute;
     left: 10px;
     top: 10px;
+}
+body {
+  padding-top: 15px;
 }
 
 section {
@@ -127,7 +125,6 @@ footer {
     }
   }
 }
-
 
 td{
   padding-top: 5px;

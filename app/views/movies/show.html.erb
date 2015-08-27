@@ -61,7 +61,7 @@
                   </div>
                   <div class="reviews">
                     <div class="star-rating" data-score=<%= review.rating %>></div>
-                    <div><%= review.comment %></div>
+                    <div class="relative"><p><%= review.comment %></p></div>
                     <% if review.user_id == current_user.id %>
                       <%= link_to "Edit!", edit_movie_review_path(review.movie_id, review.id) %>
                     <% end %>

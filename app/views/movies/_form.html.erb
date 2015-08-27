@@ -13,19 +13,19 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title , class: "form-control"%>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description , class: "form-control"%>
   </div>
   <div class="field">
     <%= f.label :year %><br>
-    <%= f.number_field :year %>
+    <%= f.number_field :year , class: "form-control"%>
   </div>
   <div class="field">
     <%= f.label :image %><br>
-    <%= f.file_field :image %>
+    <%= f.file_field :image, class: "btn btn-sm" %>
   </div>
   <div class="field">
     <%= hidden_field_tag "movie[actor_ids][]", nil %>
@@ -33,14 +33,10 @@
       <%= check_box_tag "movie[actor_ids][]", actor.id, @movie.actor_ids.include?(actor.id), id: dom_id(actor) %>
       <%= label_tag dom_id(actor), actor.name %>
       <br>
-      
     <% end %> 
   </div>
   
-  
-  
-  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary"%>
   </div>
 <% end %>
