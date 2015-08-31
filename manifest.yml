@@ -8,6 +8,7 @@ applications:
   path: .
   services:
   - MyDb
+  - MySwift
   env:
     STACK: cedar
     RAILS_ENV: production
