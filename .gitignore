@@ -16,6 +16,7 @@
 !/log/.keep
 /tmp
 /public/system/movies/images
+/public/system/actors/images
 
 /tmp/*
 !/tmp/cache/
